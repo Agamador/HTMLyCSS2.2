@@ -1,0 +1,47 @@
+.members {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__header {
+        font-weight: bold;
+    }
+    &__grid {
+        display: flex;
+        max-width: 90vw;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__grid-item {
+        min-width: 25vw;
+        margin: 20px 0;
+        @media (max-width: 1299px) {
+            margin: 20px;
+        }
+    }
+    .member {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        &__img {
+            max-width: 300px;
+            height: 300px;
+            width: 100%;
+        }
+        &__name {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        &__desc {
+            max-width: 300px;
+            font-weight: lighter;
+            text-align: center;
+            min-height: 120px;
+        }
+    }
+}
