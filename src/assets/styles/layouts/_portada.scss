@@ -4,14 +4,12 @@
 @supports (display: grid) {
     .poster {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 25px;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         align-items: center;
-
         &__grid-container {
-            grid-column: 1 / span 1;
-            grid-row: 2 / span 1;
+            grid-area: 1/2/2/3;
             border: solid 5px gray;
             grid-column-gap: 0px;
             grid-row-gap: 0px;
@@ -63,11 +61,28 @@
             text-align: center;
             font-weight: bold;
         }
+        .poster__alt-link {
+            visibility: hidden;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        .posrt__alt-link {
+            font-size: 1.1rem;
+            transition: font-size 0.1s ease-in-out;
+            cursor: pointer;
+        }
         @media (max-width: 1199px) {
             &__grid-item__text {
                 display: none;
             }
+            &__grid-item__link {
+                display: none;
+            }
             .poster__alt-text {
+                visibility: visible;
+            }
+            .poster__alt-link {
                 visibility: visible;
             }
         }
